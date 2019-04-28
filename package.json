@@ -1,6 +1,7 @@
 {
   "name": "react-pwa-boilerplate",
   "version": "0.1.0",
+  "homepage": "/react-pwa-boilerplate",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.11",
