@@ -2,7 +2,6 @@ module.exports = {
   extends: [
     "react-app",
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint"
   ],
@@ -13,5 +12,16 @@ module.exports = {
     sourceType: "module",
     project: "./tsconfig.json"
   },
-  rules: {}
+  rules: {
+    semi: ['error', 'never'],
+    'jsx-quotes': ['error', 'prefer-single'],
+    'prettier/prettier': [
+      'error',
+      {
+        semi: false,
+        singleQuote: true,
+        jsxSingleQuote: true
+      }
+    ]
+  }
 };
