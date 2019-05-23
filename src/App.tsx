@@ -10,12 +10,24 @@ import Divider from '@material-ui/core/Divider'
 import PhotoCamera from '@material-ui/icons/PhotoCamera'
 import Mic from '@material-ui/icons/Mic'
 import SettingsIcon from '@material-ui/icons/Settings'
-import { Toolbar, Typography } from '@material-ui/core'
+import {
+  Toolbar,
+  Typography,
+  createMuiTheme,
+  MuiThemeProvider
+} from '@material-ui/core'
+
+const theme = createMuiTheme({
+  // palette: {
+  //   primary: { main: '#FFFFFF' },
+  //   secondary: { main: '#000000' }
+  // }
+})
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false)
   return (
-    <div className='App'>
+    <MuiThemeProvider theme={theme}>
       <AppBar>
         <Toolbar>
           <Typography color='inherit'>PWA App</Typography>
@@ -50,7 +62,7 @@ const App: React.FC = () => {
           </ListItem>
         </List>
       </SwipeableDrawer>
-    </div>
+    </MuiThemeProvider>
   )
 }
 
