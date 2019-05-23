@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
+import AppBar from '@material-ui/core/AppBar'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
@@ -9,11 +10,17 @@ import Divider from '@material-ui/core/Divider'
 import PhotoCamera from '@material-ui/icons/PhotoCamera'
 import Mic from '@material-ui/icons/Mic'
 import SettingsIcon from '@material-ui/icons/Settings'
+import { Toolbar, Typography } from '@material-ui/core'
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false)
   return (
     <div className='App'>
+      <AppBar>
+        <Toolbar>
+          <Typography color='inherit'>PWA App</Typography>
+        </Toolbar>
+      </AppBar>
       <SwipeableDrawer
         open={isOpen}
         onClose={() => setIsOpen(false)}
